@@ -105,7 +105,7 @@ class OrderTakingAgent():
 
     def postprocess(self,output,messages,asked_recommendation_before):
         cleaned_output = "\n".join(output.splitlines()[1:]).strip('`')
-        output = json.loads(output)
+        output = json.loads(cleaned_output)
 
         if type(output["order"]) == str:
             output["order"] = json.loads(output["order"])
