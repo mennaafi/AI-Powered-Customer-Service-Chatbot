@@ -54,7 +54,7 @@ The chatbot utilizes a modular architecture with specialized agents, each design
 
 
 
-## Pipline of work :
+## Pipeline of work :
 
 When a customer submits a query, the Guard Agent first evaluates its relevance and appropriateness.
 If the query is deemed valid, the Classification Agent analyzes it to determine the user's intent, such as placing an order, inquiring about a product, or seeking a recommendation.
