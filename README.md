@@ -33,7 +33,7 @@ Customer can choose to be recommended by specific product or category.
 
 ## Knowledge base :
 
-The Knowledge Base is powered by Pinecone, where embeddings of data about our coffee shop and menu items, ingredients and other relevant product details  are stored in Pinecone. When a customer asks specific questions through the chatbot, such as asking about a product’s ingredients or prices information, the Retrieval-Augmented Generation (RAG) system retrieves the most relevant data from Pinecone
+The Knowledge Base is powered by Pinecone, where embeddings of data about our coffee shop and menu items, ingredients and other relevant product details  are stored in Pinecone. When a customer asks specific questions through the chatbot, such as asking about a product’s ingredients or prices information, the Retrieval-Augmented Generation (RAG) system retrieves the most relevant data from Pinecone.
 
 
 ## All about Agents :
