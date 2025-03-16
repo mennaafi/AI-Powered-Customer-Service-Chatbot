@@ -14,6 +14,12 @@ def get_chatbot_response(messages):
     input_messages = []
     for message in messages:
         input_messages.append({"role": message["role"], "parts": message["parts"]})
+
+    # Remove 'memory' key
+    for msg in messages:
+        if "memory" in msg:
+            del msg["memory"]
+
     response = model.generate_content(messages)  
     
     return response

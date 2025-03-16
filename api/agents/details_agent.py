@@ -55,7 +55,7 @@ class DetailsAgent():
         return output
     
 
-    def postprocess(output):
+    def  postprocess(self, output):
         output = {
             "role": "assistant",
             "parts": output,

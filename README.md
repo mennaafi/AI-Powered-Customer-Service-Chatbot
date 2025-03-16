@@ -67,24 +67,62 @@ The Recommendation Agent provides personalized product suggestions based on the 
 
 
 
+##  Getting Started  
 
+Follow these steps to set up and run the project locally.  
 
-### Install Dependencies :
-
- > - Before running the code, make sure you have all the required dependencies installed. 
-
-
-```
-pip install -r requirements.txt  
-```
- > - then run script :
-
+### **1️⃣ Clone the Repository**  
+```bash
+git clone https://github.com/mennaafi/Multi-agentic-rag-with-recommendation-engines-customer-service.git
+cd Multi-agentic-rag-with-recommendation-engines-customer-service
 
 ```
-python api\development.py
+### **2️⃣ Create a Virtual Environment**  
+```bash
+python -m venv venv
 ```
- > - After running the script, you can interact with the chatbot by entering your queries directly into the terminal. The chatbot will process your inputs and provide appropriate responses based on the system's agents and their respective functions.
+### **Activate the Virtual Environment:**  
 
+#### **Windows:**  
+```bash
+venv\Scripts\activate
+```
+#### **Mac/Linux:**  
+```bash
+source venv/bin/activate
+```
+### 3️⃣ Install Dependencies  
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Set Up the .env File
+Create a .env file in the project root add the following (similar to .env.example)
+
+### 5️⃣  Build the Docker Image
+(Optional, if you want to use Docker)
+
+If you're using Docker, navigate to the `api` directory and build the image:
+
+```bash
+docker build -f api/Dockerfile -t my-fastapi-app ..
+```
+
+## 6️⃣ Run the Application
+
+### Using Docker:
+Run the application using the following command:
+
+```bash
+docker run -d -p 8000:8000 my-fastapi-app
+``` 
+
+### Without Docker:
+Run the FastAPI application with `uvicorn`:
+
+```bash
+uvicorn api.main:app --reload --host 127.0.0.1 --port 8000
+```
 
  
 

@@ -42,7 +42,7 @@ class GuardAgent:
             "message": leave the message empty if it's allowed, otherwise write "Sorry, I can't help with that. Can I help you with your order?"
             }
             """
-        input_messages = [{"role": "model", "parts": system_prompt}] + messages
+        input_messages = [{"role": "model", "parts": system_prompt}] + [messages[-1]]
         chatbot_output = get_chatbot_response(input_messages).text
         output = self.postprocess(chatbot_output)
         

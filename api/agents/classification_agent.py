@@ -33,9 +33,17 @@ class ClassificationAgent():
             }
             """
         
-        
-        input_messages = [{"role": "model", "parts": system_prompt}] + messages
-        chatbot_output = get_chatbot_response(input_messages).text
+            # Remove 'memory' key from all messages before sending
+               # Remove 'memory' key from all messages before sending    # Remove 'memory' key from all messages before sending
+        for msg in messages:
+            if "memory" in msg:
+                del msg['memory']
+
+
+
+        input_messages = [{"role": "model", "parts": system_prompt}] + [messages[-1]]
+        chatbot_output =  get_chatbot_response(input_messages).text
+
         output = self.postprocess(chatbot_output)
         return output
     
